@@ -12,5 +12,6 @@ html {
 
 body {
   font-family: "Inter", serif;
+  background-color: ${({theme}) => theme.color.white};
 }
 `;
