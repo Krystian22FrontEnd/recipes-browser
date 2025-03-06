@@ -1,15 +1,25 @@
-import { Nav, List, ListItem, SiteName } from "./styled"
+import { Nav, List, ListItem, SiteName } from "./styled";
 
 const Navigation = () => {
-return (
+  //ZMIENIĆ FONT SITE NAME
+  return (
     <Nav>
-  <List>
-    <SiteName>Site name</SiteName>
-    <ListItem>Main page</ListItem>
-    <ListItem>About Author</ListItem>
-  </List>
-</Nav>
-)
-}
+      <List>
+        <SiteName>
+          <a> Site name</a>
+        </SiteName>
+        <ListItem>
+          <a>Recipes</a>
+        </ListItem>
+        <ListItem>
+          <a>Main page</a>
+        </ListItem>
+        <ListItem>
+          <a>About</a>
+        </ListItem>
+      </List>
+    </Nav>
+  );
+};
 
-export default Navigation
+export default Navigation;

@@ -5,7 +5,6 @@ function App() {
   return (
 <Container>
 <Navigation/>
-<div>HELLO WORLD</div>
 </Container>
   )
 }
