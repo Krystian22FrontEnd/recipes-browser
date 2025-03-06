@@ -1,5 +1,12 @@
+import { Container } from "./common/Container";
+import Navigation from "./Navigation";
+
 function App() {
-  return <div>HELLO WORLD</div>;
+  return (
+<Container>
+<Navigation/>
+</Container>
+  )
 }
 
 export default App;
