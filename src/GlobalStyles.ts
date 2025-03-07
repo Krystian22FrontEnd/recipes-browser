@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Inter", serif;
+  font-family: "Varela Round", sans-serif;
   background-color: ${({theme}) => theme.color.white};
 }
 `;

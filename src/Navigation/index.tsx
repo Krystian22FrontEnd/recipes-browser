@@ -6,7 +6,7 @@ const Navigation = () => {
     <Nav>
       <List>
         <SiteName>
-          <a> Site name</a>
+          <a> Recipe browser</a>
         </SiteName>
         <ListItem>
           <a>Recipes</a>
