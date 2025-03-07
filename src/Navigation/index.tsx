@@ -1,4 +1,4 @@
-import { Nav, List, ListItem, SiteName } from "./styled";
+import { Nav, List, ListItem, SiteName, Input, Form } from "./styled";
 
 const Navigation = () => {
   //ZMIENIĆ FONT SITE NAME
@@ -18,6 +18,9 @@ const Navigation = () => {
           <a>About</a>
         </ListItem>
       </List>
+      <Form>
+        <Input type="search" placeholder="Find what you like"/>
+      </Form>
     </Nav>
   );
 };
