@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Arrow } from "../../icons/right-arrow-svgrepo-com.svg";
+import { ReactComponent as Arrow } from "../../../icons/right-arrow-svgrepo-com.svg";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-export const Header3 = styled.h3`
+export const Header2 = styled.h2`
   margin: 0;
   padding-bottom: 15px;
   font-size: 35px;
