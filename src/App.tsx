@@ -1,12 +1,14 @@
 import { Container } from "./common/Container";
-import Navigation from "./Navigation";
+import Main from "./common/Main";
+import Navigation from "./features/Navigation";
 
 function App() {
   return (
-<Container>
-<Navigation/>
-</Container>
-  )
+    <Container>
+      <Navigation />
+      <Main />
+    </Container>
+  );
 }
 
 export default App;

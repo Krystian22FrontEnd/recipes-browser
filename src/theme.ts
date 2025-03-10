@@ -1,5 +1,6 @@
 export const theme = {
     color: {
-        white: "#ffffff"
+        white: "hsl(0, 0%, 100%)",
+        woodSmoke: "hsl(240, 12%, 8%)",
     }
 }
