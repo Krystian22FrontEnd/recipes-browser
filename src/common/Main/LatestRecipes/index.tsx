@@ -1,5 +1,5 @@
 import {
-  Header3,
+  Header2,
   Image,
   ImageCont,
   ImageName,
@@ -10,15 +10,15 @@ import {
   TextWrapper,
   Wrapper,
 } from "./styled";
-import Szama from "../../images/Szama1.jpg";
-import Szama2 from "../../images/Szama1.jpg";
+import Szama from "../../../images/Szama1.jpg";
+import Szama2 from "../../../images/Szama2.jpg";
 
 export const LatestRecipes = () => {
   return (
     <>
       <Wrapper>
         <TextWrapper>
-          <Header3>Latest recipes</Header3>
+          <Header2>Latest recipes</Header2>
           <StyledParagraph>
             Take a look at recently added recipes.
           </StyledParagraph>
@@ -27,6 +27,12 @@ export const LatestRecipes = () => {
           <ListItem>
             <ImageCont>
               <Image src={Szama} alt="Example image" />
+              <ImageName>Example Name</ImageName>
+            </ImageCont>
+          </ListItem>
+          <ListItem>
+            <ImageCont>
+              <Image src={Szama2} alt="Example image" />
               <ImageName>Example Name</ImageName>
             </ImageCont>
           </ListItem>

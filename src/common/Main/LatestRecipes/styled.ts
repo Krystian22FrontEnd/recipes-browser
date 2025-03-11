@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { ReactComponent as Arrow } from "../../icons/right-arrow-svgrepo-com.svg";
+import { ReactComponent as Arrow } from "../../../icons/right-arrow.svg";
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-top: 100px;
+  align-items: center;
+  height: 460px;
+  background-color: ${({theme}) => theme.color.dolly};
+  margin-top: 20px;
 `;
 
 export const TextWrapper = styled.div`
@@ -16,16 +19,16 @@ export const StyledParagraph = styled.p`
   margin: 0;
 `;
 
-export const Header3 = styled.h3`
+export const Header2 = styled.h2`
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   font-size: 35px;
 `;
 
 export const List = styled.ul`
   display: flex;
-  flex-wrap: nowrap;
   margin: 0;
+  padding-left: 0;
 `;
 
 export const ListItem = styled.li`
@@ -37,12 +40,25 @@ export const ImageCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+  width: 270px;
+  height: 350px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  }
 `;
 
 export const Image = styled.img`
-  width: 500px;
-  height: 350px;
-  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
