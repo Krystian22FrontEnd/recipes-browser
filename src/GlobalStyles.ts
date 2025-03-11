@@ -13,6 +13,5 @@ html {
 body {
   font-family: "Varela Round", sans-serif;
   background-color: ${({ theme }) => theme.color.white};
-
 }
 `;
