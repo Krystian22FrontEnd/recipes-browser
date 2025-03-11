@@ -36,6 +36,12 @@ export const LatestRecipes = () => {
               <ImageName>Example Name</ImageName>
             </ImageCont>
           </ListItem>
+          <ListItem>
+            <ImageCont>
+              <Image src={Szama2} alt="Example image" />
+              <ImageName>Example Name</ImageName>
+            </ImageCont>
+          </ListItem>
           <StyledArrow />
         </List>
       </Wrapper>

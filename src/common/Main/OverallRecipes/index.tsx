@@ -1,5 +1,14 @@
-import { Header2, Image, ImageCont, ImageName } from "../LatestRecipes/styled";
-import { StyledParagraph, Wrapper, List, ListItem } from "./styled";
+import { Image, ImageName } from "../LatestRecipes/styled";
+import {
+  StyledParagraph,
+  Wrapper,
+  List,
+  ListItem,
+  Button,
+  StyledButtonArrow,
+  ImageContBigger,
+  Header2,
+} from "./styled";
 import szama from "../../../images/Szama1.jpg";
 import szama2 from "../../../images/Szama2.jpg";
 
@@ -16,60 +25,64 @@ export const OverallRecipes = () => {
         </StyledParagraph>
         <List>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama2} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama2} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama2} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama2} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
           <ListItem>
-            <ImageCont>
+            <ImageContBigger>
               <Image src={szama} alt="Example image" />
               <ImageName>Example Name</ImageName>
-            </ImageCont>
+            </ImageContBigger>
           </ListItem>
         </List>
+        <Button>
+          SEE MORE
+          <StyledButtonArrow />
+        </Button>
       </Wrapper>
     </>
   );
