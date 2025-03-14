@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid ${({theme}) => theme.color.greenHaze};
   max-width: 1360px;
   padding-bottom: 20px;
 `;

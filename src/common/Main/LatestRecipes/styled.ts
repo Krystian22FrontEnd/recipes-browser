@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 460px;
-  background-color: ${({theme}) => theme.color.dolly};
+  background-color: ${({ theme }) => theme.color.greenHaze};
   margin-top: 20px;
 `;
 
@@ -23,6 +23,7 @@ export const Header2 = styled.h2`
   margin: 0;
   padding-bottom: 16px;
   font-size: 35px;
+  color: ${({ theme }) => theme.color.concrete};
 `;
 
 export const List = styled.ul`
@@ -60,6 +61,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 2px 2px 10px white;
 `;
 
 export const StyledArrow = styled(Arrow)`
@@ -67,6 +69,7 @@ export const StyledArrow = styled(Arrow)`
   align-self: center;
   height: 96px;
   margin-left: -48px;
+  color: ${({ theme }) => theme.color.concrete};
 `;
 
 export const ImageName = styled.p`

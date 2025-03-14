@@ -21,7 +21,7 @@ export const styleIcon = (Icon: FC<SVGProps<SVGSVGElement>>) => styled(Icon)`
 
   &:hover {
     transition: 0.3s;
-    color: green;
+    color: ${({theme}) => theme.color.greenHaze};
     cursor: pointer;
   }
 `;
