@@ -1,5 +1,6 @@
-import { List, ListItem, SocialsLinks } from "../SocialIcons/styled";
+import { ListItem, SocialsLinks } from "../SocialIcons/styled";
 import { stack } from "./stack";
+import { List } from "./styled";
 
 export const StackIcons = () => {
   return (

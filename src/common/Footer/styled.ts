@@ -14,7 +14,7 @@ export const Address = styled.address``;
 export const Header4 = styled.h4`
   font-size: 18px;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 `;
 
 export const Paragraph = styled.p`
@@ -23,7 +23,7 @@ export const Paragraph = styled.p`
 `;
 
 export const EmailLink = styled.a`
-  font-size: 26px;
+  font-size: 24px;
   text-decoration: none;
   font-style: unset;
   color: ${({ theme }) => theme.color.woodSmoke};
