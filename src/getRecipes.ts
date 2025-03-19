@@ -4,22 +4,24 @@ import { useEffect, useState } from "react";
 interface Meal {
   id: number;
   name: string;
+  image: string
 }
 
 type Status =
-  | { status: "loading"; data?: Meal }
+  | { status: "loading"; data: Meal[] }
   | { status: "success"; data: Meal[] }
-  | { status: "error" };
+  | { status: "error"; data: Meal[] };
 
 export const useGetRecipes = () => {
   const [recipes, setRecipes] = useState<Status>({
     status: "loading",
+    data: []
   });
 
   useEffect(() => {
     const axiosData = async () => {
       try {
-        const getData = "https://dummyjson.com/recipes";
+        const getData = "https://dummyjson.com/recipes?limit=12&skip=10";
         const response = await axios.get<{ recipes: Meal[] }>(`${getData}`);
         setRecipes({
           status: "success",
@@ -28,10 +30,11 @@ export const useGetRecipes = () => {
       } catch (error) {
         setRecipes({
           status: "error",
+          data: [],
         });
       }
     };
-    setTimeout(axiosData, 1000);
+    setTimeout(axiosData);
   }, []);
   return recipes;
 };

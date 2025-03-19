@@ -37,7 +37,7 @@ export const ListItem = styled.li`
 
 export const ImageContBigger = styled(ImageCont)`
   width: 438px;
-  height: 350px;
+  height: auto;
 `;
 
 export const Button = styled.button`
