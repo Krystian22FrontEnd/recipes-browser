@@ -11,8 +11,11 @@ import {
 } from "./styled";
 import szama from "../../../images/Szama1.jpg";
 import szama2 from "../../../images/Szama2.jpg";
+import { useGetRecipes } from "../../../getRecipes";
 
 export const OverallRecipes = () => {
+const recipes = useGetRecipes();
+console.log(recipes)
   return (
     <>
       <Wrapper>
