@@ -9,13 +9,11 @@ import {
   ImageContBigger,
   Header2,
 } from "./styled";
-import szama from "../../../images/Szama1.jpg";
-import szama2 from "../../../images/Szama2.jpg";
 import { useGetRecipes } from "../../../getRecipes";
 
 export const OverallRecipes = () => {
-const recipes = useGetRecipes();
-console.log(recipes)
+  const recipes = useGetRecipes();
+  console.log(recipes);
   return (
     <>
       <Wrapper>
@@ -27,60 +25,14 @@ console.log(recipes)
           sequi non temporibus et. Consequuntur!
         </StyledParagraph>
         <List>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
-          <ListItem>
-            <ImageContBigger>
-              <Image src={szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageContBigger>
-          </ListItem>
+          {recipes.data.map(({ id, name, image }) => (
+            <ListItem key={id}>
+              <ImageContBigger>
+                <Image src={image} alt="Example image" />
+                <ImageName> {name}</ImageName>
+              </ImageContBigger>
+            </ListItem>
+          ))}
         </List>
         <Button>
           SEE MORE

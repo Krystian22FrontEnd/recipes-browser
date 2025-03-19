@@ -6,7 +6,7 @@ export const StyledFooter = styled.footer`
   padding-top: 20px;
   background-color: ${({ theme }) => theme.color.concrete};
   margin-top: 20px;
-  height: 20vh;
+  height: 168px;
 `;
 
 export const Address = styled.address``;
