@@ -1,10 +1,10 @@
 import { LatestRecipes } from "./LatestRecipes";
-import { OverallRecipes } from "./OverallRecipes";
+import { PopularPicks } from "./PopularPicks";
 
 const Main = () => {
   return (
     <>
-      <OverallRecipes />
+      <PopularPicks />
       <LatestRecipes />
     </>
   );

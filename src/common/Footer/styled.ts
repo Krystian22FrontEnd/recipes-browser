@@ -17,15 +17,10 @@ export const Header4 = styled.h4`
   padding-bottom: 16px;
 `;
 
-export const Paragraph = styled.p`
+export const Link = styled.a`
   font-size: 18px;
   margin: 0;
-`;
-
-export const EmailLink = styled.a`
-  font-size: 24px;
   text-decoration: none;
-  font-style: unset;
   color: ${({ theme }) => theme.color.woodSmoke};
 
   &:hover {
@@ -33,4 +28,9 @@ export const EmailLink = styled.a`
     color: ${({ theme }) => theme.color.greenHaze};
     cursor: pointer;
   }
+`;
+
+export const EmailLink = styled(Link)`
+  font-size: 24px;
+  font-style: unset;
 `;
