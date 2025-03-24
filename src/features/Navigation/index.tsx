@@ -12,6 +12,9 @@ const Navigation = () => {
           <a>Recipes</a>
         </ListItem>
         <ListItem>
+          <a>Categories</a>
+        </ListItem>
+        <ListItem>
           <a>Main page</a>
         </ListItem>
         <ListItem>
