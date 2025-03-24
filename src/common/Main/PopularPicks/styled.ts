@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { ReactComponent as ButtonArrow } from "../../../icons/ButtonRightArrow.svg";
 import { ImageCont } from "../LatestRecipes/styled";
+import { ReactComponent as PrepTimeIcon } from "../../../icons/prepTimeIcon.svg";
+import { ReactComponent as StarIcon } from "../../../icons/starIcon.svg";
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  border-bottom: 3px solid ${({theme}) => theme.color.greenHaze};
+  border-bottom: 3px solid ${({ theme }) => theme.color.greenHaze};
   max-width: 1360px;
   padding-bottom: 20px;
 `;
@@ -38,6 +40,46 @@ export const ListItem = styled.li`
 export const ImageContBigger = styled(ImageCont)`
   width: 438px;
   height: auto;
+`;
+
+export const ExtraInfo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 5px;
+`;
+
+export const Span = styled.span`
+font-weight: 700;
+padding-right: 15px;
+color: black;
+`
+
+export const ReviewCount = styled.span`
+  display: flex;
+  align-items: flex-end;
+  color: gray;
+  font-size: 18px;
+`;
+
+export const PrepTime = styled.span`
+  display: flex;
+  align-items: flex-end;
+  color: gray;
+  font-size: 18px;
+`;
+
+export const StyledStarIcon = styled(StarIcon)`
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+`;
+
+export const StyledPrepTimeIcon = styled(PrepTimeIcon)`
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 `;
 
 export const Button = styled.button`
