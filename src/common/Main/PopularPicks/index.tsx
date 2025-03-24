@@ -8,11 +8,17 @@ import {
   StyledButtonArrow,
   ImageContBigger,
   Header2,
+  ExtraInfo,
+  StyledStarIcon,
+  StyledPrepTimeIcon,
+  PrepTime,
+  ReviewCount,
+  Span,
 } from "./styled";
-import { useGetRecipes } from "../../../getRecipes";
+import { useGetPopularRecipes } from "../../../useGetPopularRecipes";
 
 export const PopularPicks = () => {
-  const recipes = useGetRecipes();
+  const recipes = useGetPopularRecipes();
   console.log(recipes);
   return (
     <>
@@ -25,14 +31,22 @@ export const PopularPicks = () => {
           sequi non temporibus et. Consequuntur!
         </StyledParagraph>
         <List>
-          {recipes.data.map(({ id, name, image }) => (
-            <ListItem key={id}>
-              <ImageContBigger>
-                <Image src={image} alt="Example image" />
-                <ImageName> {name}</ImageName>
-              </ImageContBigger>
-            </ListItem>
-          ))}
+          {recipes.data.map(
+            ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
+              <ListItem key={id}>
+                <ImageContBigger>
+                  <Image src={image} alt="Example image" />
+                  <ImageName> {name}</ImageName>
+                </ImageContBigger>
+                <ExtraInfo>
+                  <ReviewCount><StyledStarIcon/><Span>{rating}</Span> ({reviewCount}) reviews</ReviewCount>
+                  <PrepTime>
+                    <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
+                  </PrepTime>
+                </ExtraInfo>
+              </ListItem>
+            )
+          )}
         </List>
         <Button>
           SEE MORE

@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 interface Meal {
   id: number;
   name: string;
-  image: string
+  image: string;
+  rating: number;
+  reviewCount: number;
+  prepTimeMinutes: number;
 }
 
 type Status =
@@ -12,7 +15,7 @@ type Status =
   | { status: "success"; data: Meal[] }
   | { status: "error"; data: Meal[] };
 
-export const useGetRecipes = () => {
+export const useGetPopularRecipes = () => {
   const [recipes, setRecipes] = useState<Status>({
     status: "loading",
     data: []
@@ -21,7 +24,7 @@ export const useGetRecipes = () => {
   useEffect(() => {
     const axiosData = async () => {
       try {
-        const getData = "https://dummyjson.com/recipes?limit=12&skip=10";
+        const getData = "https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=12";
         const response = await axios.get<{ recipes: Meal[] }>(`${getData}`);
         setRecipes({
           status: "success",
