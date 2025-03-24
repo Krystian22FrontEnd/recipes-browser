@@ -1,4 +1,4 @@
-import { Address, EmailLink, Header4, Paragraph, StyledFooter } from "./styled";
+import { Address, EmailLink, Header4, Link, StyledFooter } from "./styled";
 import { SocialIcons } from "./SocialIcons";
 import email from "../../email";
 import { StackIcons } from "./StackIcons";
@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div>
           <Header4>API data driven from:</Header4>
-          <Paragraph>API</Paragraph>
+          <Link href="https://dummyjson.com" target="_blank" rel="norefferrer">DummyJSON</Link>
         </div>
         <Address>
           <Header4>Contact & Links</Header4>

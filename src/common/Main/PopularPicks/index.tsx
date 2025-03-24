@@ -11,13 +11,13 @@ import {
 } from "./styled";
 import { useGetRecipes } from "../../../getRecipes";
 
-export const OverallRecipes = () => {
+export const PopularPicks = () => {
   const recipes = useGetRecipes();
   console.log(recipes);
   return (
     <>
       <Wrapper>
-        <Header2>Recipes(Popular?)</Header2>
+        <Header2>Popular Choices</Header2>
         <StyledParagraph>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
           repellendus culpa excepturi minus dicta. Quaerat inventore architecto
