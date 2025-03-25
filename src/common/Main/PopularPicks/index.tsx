@@ -35,7 +35,7 @@ export const PopularPicks = () => {
             ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
               <ListItem key={id}>
                 <ImageContBigger>
-                  <Image src={image} alt="Example image" />
+                  <Image src={image} alt="food image" />
                   <ImageName> {name}</ImageName>
                 </ImageContBigger>
                 <ExtraInfo>

@@ -1,3 +1,4 @@
+import { useGetLatestRecipes } from "../../../useGetLatestRecipes";
 import {
   Header2,
   Image,
@@ -10,10 +11,10 @@ import {
   TextWrapper,
   Wrapper,
 } from "./styled";
-import Szama from "../../../images/Szama1.jpg";
-import Szama2 from "../../../images/Szama2.jpg";
 
 export const LatestRecipes = () => {
+  const recipes = useGetLatestRecipes();
+
   return (
     <>
       <Wrapper>
@@ -24,24 +25,16 @@ export const LatestRecipes = () => {
           </StyledParagraph>
         </TextWrapper>
         <List>
-          <ListItem>
-            <ImageCont>
-              <Image src={Szama} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageCont>
-          </ListItem>
-          <ListItem>
-            <ImageCont>
-              <Image src={Szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageCont>
-          </ListItem>
-          <ListItem>
-            <ImageCont>
-              <Image src={Szama2} alt="Example image" />
-              <ImageName>Example Name</ImageName>
-            </ImageCont>
-          </ListItem>
+          {recipes.data.map(
+            ({ id, name, image }) => (
+              <ListItem key={id}>
+                <ImageCont>
+                  <Image src={image} alt="food image" />
+                  <ImageName>{name}</ImageName>
+                </ImageCont>
+              </ListItem>
+            )
+          )}
           <StyledArrow />
         </List>
       </Wrapper>

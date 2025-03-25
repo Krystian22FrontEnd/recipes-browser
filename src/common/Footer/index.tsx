@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div>
           <Header4>API data driven from:</Header4>
-          <Link href="https://dummyjson.com" target="_blank" rel="norefferrer">DummyJSON</Link>
+          <Link href="https://dummyjson.com" target="_blank" rel="norefferrer" title="DummyJSON API link">DummyJSON</Link>
         </div>
         <Address>
           <Header4>Contact & Links</Header4>
