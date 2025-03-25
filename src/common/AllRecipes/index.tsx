@@ -22,7 +22,7 @@ export const AllRecipes = () => {
             ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
               <ListItem key={id}>
                 <RecipesImageCont>
-                  <Image src={image} alt="Example image" />
+                  <Image src={image} alt="food image" />
                   <ImageName> {name}</ImageName>
                 </RecipesImageCont>
                 <ExtraInfo>
