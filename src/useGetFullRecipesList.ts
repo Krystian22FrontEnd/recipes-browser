@@ -4,7 +4,10 @@ import { useEffect, useState } from "react";
 interface Meal {
   id: number;
   name: string;
-  image: string
+  image: string;
+  rating: number;
+  reviewCount: number;
+  prepTimeMinutes: number;
 }
 
 type Status =
@@ -21,7 +24,7 @@ export const useGetFullRecipesList = () => {
   useEffect(() => {
     const axiosData = async () => {
       try {
-        const getData = "https://dummyjson.com/recipes?limit=0";
+        const getData = "https://dummyjson.com/recipes?limit=0&sortBy=id&order=desc";
         const response = await axios.get<{ recipes: Meal[] }>(`${getData}`);
         setAllRecipes({
           status: "success",
