@@ -39,7 +39,10 @@ export const PopularPicks = () => {
                   <ImageName> {name}</ImageName>
                 </ImageContBigger>
                 <ExtraInfo>
-                  <ReviewCount><StyledStarIcon/><Span>{rating}</Span> ({reviewCount}) reviews</ReviewCount>
+                  <ReviewCount>
+                    <StyledStarIcon />
+                    <Span>{rating}</Span> ({reviewCount}) reviews
+                  </ReviewCount>
                   <PrepTime>
                     <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
                   </PrepTime>
