@@ -37,7 +37,7 @@ export const useGetPopularRecipes = () => {
         });
       }
     };
-    setTimeout(axiosData);
+    setTimeout(axiosData, 1000);
   }, []);
   return recipes;
 };
