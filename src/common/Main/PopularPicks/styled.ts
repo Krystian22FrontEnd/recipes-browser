@@ -23,7 +23,7 @@ export const Header2 = styled.h2`
 
 export const StyledParagraph = styled.p`
   text-align: center;
-  margin: 0;
+  margin: 0 0 20px;
 `;
 
 export const List = styled.ul`
@@ -35,6 +35,10 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style-type: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ImageContBigger = styled(ImageCont)`

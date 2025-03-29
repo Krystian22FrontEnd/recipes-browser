@@ -10,7 +10,7 @@ function App() {
       <Navigation />
       <Main />
       {/* <AllRecipes/> */}
-      <Footer/>
+      <Footer />
     </Container>
   );
 }
