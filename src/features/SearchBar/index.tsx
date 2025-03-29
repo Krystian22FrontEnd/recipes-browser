@@ -1,4 +1,4 @@
-import { Form, Input } from "./styled";
+import { Form, Input, LoopIcon } from "./styled";
 
 export const SearchBar = () => {
   return (
@@ -9,6 +9,7 @@ export const SearchBar = () => {
           type="search"
           placeholder="Find what you like"
         />
+        <LoopIcon />
       </Form>
     </>
   );

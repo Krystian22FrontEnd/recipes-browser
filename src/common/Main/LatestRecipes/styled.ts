@@ -35,6 +35,10 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   margin-right: 48px;
   list-style-type: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ImageCont = styled.div`
@@ -53,6 +57,21 @@ export const ImageCont = styled.div`
     width: 100%;
     height: 40%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    background: rgba(255, 255, 255, 0.4);
   }
 `;
 
