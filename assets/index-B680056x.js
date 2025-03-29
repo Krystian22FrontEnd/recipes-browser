@@ -117,6 +117,7 @@ margin: 0 auto;
   &:hover {
     animation-name: rotate;
     animation-duration: 1s;
+    transform: scale(1.2);
 
     @keyframes rotate {
       100% {
