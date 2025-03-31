@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import background from "../../images/background.jpg";
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   margin: 0 auto;
@@ -35,4 +36,15 @@ export const SiteName = styled(ListItem)`
   font-size: 25px;
   font-weight: 700;
   color: ${({ theme }) => theme.color.white};
+`;
+
+export const NaviLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.concrete};
+
+
+  &:hover {
+    color: ${({ theme }) => theme.color.fruitSalad};
+    transition: 0.3s;
+  }
 `;

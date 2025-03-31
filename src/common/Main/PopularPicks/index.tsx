@@ -4,7 +4,6 @@ import {
   Wrapper,
   List,
   ListItem,
-  Button,
   StyledButtonArrow,
   ImageContBigger,
   Header2,
@@ -14,12 +13,14 @@ import {
   PrepTime,
   ReviewCount,
   Span,
+  ButtonLink,
 } from "./styled";
 import { useGetPopularRecipes } from "../../../useGetPopularRecipes";
 
 export const PopularPicks = () => {
   const recipes = useGetPopularRecipes();
   console.log(recipes);
+
   return (
     <>
       <Wrapper>
@@ -51,10 +52,9 @@ export const PopularPicks = () => {
             )
           )}
         </List>
-        <Button>
-          SEE MORE
-          <StyledButtonArrow />
-        </Button>
+        <ButtonLink to={"/allRecipes"} title="All recipes">
+          SEE MORE <StyledButtonArrow />
+        </ButtonLink>
       </Wrapper>
     </>
   );
