@@ -1,4 +1,3 @@
-// import { AllRecipes } from "./common/AllRecipes";
 import { Container } from "./common/Container";
 import Footer from "./common/Footer";
 import Main from "./common/Main";
@@ -9,7 +8,6 @@ function App() {
     <Container>
       <Navigation />
       <Main />
-      {/* <AllRecipes/> */}
       <Footer />
     </Container>
   );

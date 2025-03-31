@@ -1,5 +1,7 @@
+import Navigation from "../../features/Navigation";
 import { useGetFullRecipesList } from "../../useGetFullRecipesList";
 import { ErrorPage } from "../ErrorPage";
+import Footer from "../Footer";
 import { LoadingPage } from "../LoadingPage";
 import { Image, ImageName } from "../Main/LatestRecipes/styled";
 import {
@@ -23,29 +25,33 @@ export const AllRecipes = () => {
       ) : allRecipes.status === "error" ? (
         <ErrorPage />
       ) : (
-        <RecipesWrapper>
-          <RecipesList>
-            {allRecipes.data.map(
-              ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
-                <ListItem key={id}>
-                  <RecipesImageCont>
-                    <Image src={image} alt="food image" />
-                    <ImageName> {name}</ImageName>
-                  </RecipesImageCont>
-                  <ExtraInfo>
-                    <ReviewCount>
-                      <StyledStarIcon />
-                      <Span>{rating}</Span> ({reviewCount}) reviews
-                    </ReviewCount>
-                    <PrepTime>
-                      <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                    </PrepTime>
-                  </ExtraInfo>
-                </ListItem>
-              )
-            )}
-          </RecipesList>
-        </RecipesWrapper>
+        <>
+          <Navigation />
+          <RecipesWrapper>
+            <RecipesList>
+              {allRecipes.data.map(
+                ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
+                  <ListItem key={id}>
+                    <RecipesImageCont>
+                      <Image src={image} alt="food image" />
+                      <ImageName> {name}</ImageName>
+                    </RecipesImageCont>
+                    <ExtraInfo>
+                      <ReviewCount>
+                        <StyledStarIcon />
+                        <Span>{rating}</Span> ({reviewCount}) reviews
+                      </ReviewCount>
+                      <PrepTime>
+                        <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
+                      </PrepTime>
+                    </ExtraInfo>
+                  </ListItem>
+                )
+              )}
+            </RecipesList>
+          </RecipesWrapper>
+          <Footer />
+        </>
       )}
     </>
   );

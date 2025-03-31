@@ -3,6 +3,7 @@ import { ReactComponent as ButtonArrow } from "../../../icons/ButtonRightArrow.s
 import { ImageCont } from "../LatestRecipes/styled";
 import { ReactComponent as PrepTimeIcon } from "../../../icons/prepTimeIcon.svg";
 import { ReactComponent as StarIcon } from "../../../icons/starIcon.svg";
+import { Link } from "react-router";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -55,10 +56,10 @@ export const ExtraInfo = styled.div`
 `;
 
 export const Span = styled.span`
-font-weight: 700;
-padding-right: 15px;
-color: black;
-`
+  font-weight: 700;
+  padding-right: 15px;
+  color: black;
+`;
 
 export const ReviewCount = styled.span`
   display: flex;
@@ -86,15 +87,22 @@ export const StyledPrepTimeIcon = styled(PrepTimeIcon)`
   margin-right: 10px;
 `;
 
-export const Button = styled.button`
+export const ButtonLink = styled(Link)`
   display: flex;
   align-items: end;
   padding: 16px 24px;
   margin-top: 30px;
   border: none;
   font-weight: 600;
-  background-color: ${({ theme }) => theme.color.fruitSalad};
+  background-color: ${({ theme }) => theme.color.greenHaze};
   color: ${({ theme }) => theme.color.white};
+  text-decoration: none;
+  color: ${({ theme }) => theme.color.concrete};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.fruitSalad};
+    transition: 0.3s;
+  }
 `;
 
 export const StyledButtonArrow = styled(ButtonArrow)`
