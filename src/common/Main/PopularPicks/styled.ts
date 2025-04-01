@@ -87,6 +87,16 @@ export const StyledPrepTimeIcon = styled(PrepTimeIcon)`
   margin-right: 10px;
 `;
 
+export const StyledButtonArrow = styled(ButtonArrow)`
+  height: 22px;
+  padding-left: 10px;
+  @keyframes arrowSlide {
+    100% {
+      transform: translateX(8px) scale(1.1);
+    }
+  }
+`;
+
 export const ButtonLink = styled(Link)`
   display: flex;
   align-items: end;
@@ -102,10 +112,8 @@ export const ButtonLink = styled(Link)`
   &:hover {
     background-color: ${({ theme }) => theme.color.fruitSalad};
     transition: 0.3s;
+    & ${StyledButtonArrow} {
+      animation: arrowSlide 0.4s ease-in-out forwards;
+    }
   }
-`;
-
-export const StyledButtonArrow = styled(ButtonArrow)`
-  height: 22px;
-  padding-left: 10px;
 `;

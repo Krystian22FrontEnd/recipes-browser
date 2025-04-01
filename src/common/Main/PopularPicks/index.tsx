@@ -52,7 +52,7 @@ export const PopularPicks = () => {
             )
           )}
         </List>
-        <ButtonLink to={"/allRecipes"} title="All recipes">
+        <ButtonLink to={"/allRecipes"}>
           SEE MORE <StyledButtonArrow />
         </ButtonLink>
       </Wrapper>
