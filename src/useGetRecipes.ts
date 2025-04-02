@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 interface Meal {
   id: number;
@@ -15,17 +16,31 @@ type Status =
   | { status: "success"; data: Meal[] }
   | { status: "error"; data: Meal[] };
 
-export const useGetPopularRecipes = () => {
+export const useGetRecipes = () => {
   const [recipes, setRecipes] = useState<Status>({
     status: "loading",
-    data: []
+    data: [],
   });
+
+  const location = useLocation();
+
+  const changeApiURL = () => {
+    switch (location.pathname) {
+      case "/":
+        return "https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=12";
+      case "/allRecipes":
+        return "https://dummyjson.com/recipes?limit=0&sortBy=id&order=desc";
+      default:
+    }
+  };
 
   useEffect(() => {
     const axiosData = async () => {
       try {
-        const getData = "https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=12";
-        const response = await axios.get<{ recipes: Meal[] }>(`${getData}`);
+        const response = await axios.get<{ recipes: Meal[] }>(
+          `${changeApiURL()}`
+        );
+
         setRecipes({
           status: "success",
           data: response.data.recipes,
@@ -38,6 +53,6 @@ export const useGetPopularRecipes = () => {
       }
     };
     setTimeout(axiosData, 1000);
-  }, []);
+  }, [location.pathname]);
   return recipes;
 };

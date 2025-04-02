@@ -1,11 +1,11 @@
 import { LatestRecipes } from "./LatestRecipes";
 import { PopularPicks } from "./PopularPicks";
-import { useGetPopularRecipes } from "../../useGetPopularRecipes";
+import { useGetRecipes } from "../../useGetRecipes";
 import { LoadingPage } from "../LoadingPage";
 import { ErrorPage } from "../ErrorPage";
 
 const Main = () => {
-  const recipes = useGetPopularRecipes();
+  const recipes = useGetRecipes();
 
   return (
     <>

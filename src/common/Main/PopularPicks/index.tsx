@@ -15,10 +15,10 @@ import {
   Span,
   ButtonLink,
 } from "./styled";
-import { useGetPopularRecipes } from "../../../useGetPopularRecipes";
+import { useGetRecipes } from "../../../useGetRecipes";
 
 export const PopularPicks = () => {
-  const recipes = useGetPopularRecipes();
+  const recipes = useGetRecipes();
   console.log(recipes);
 
   return (

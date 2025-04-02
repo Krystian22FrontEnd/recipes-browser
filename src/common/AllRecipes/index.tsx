@@ -1,5 +1,5 @@
 import Navigation from "../../features/Navigation";
-import { useGetFullRecipesList } from "../../useGetFullRecipesList";
+import { useGetRecipes } from "../../useGetRecipes";
 import { ErrorPage } from "../ErrorPage";
 import Footer from "../Footer";
 import { LoadingPage } from "../LoadingPage";
@@ -16,7 +16,7 @@ import {
 import { RecipesImageCont, RecipesList, RecipesWrapper } from "./styled";
 
 export const AllRecipes = () => {
-  const allRecipes = useGetFullRecipesList();
+  const allRecipes = useGetRecipes();
 
   return (
     <>
