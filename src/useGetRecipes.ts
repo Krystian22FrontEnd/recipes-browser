@@ -30,6 +30,8 @@ export const useGetRecipes = () => {
         return "https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=12";
       case "/allRecipes":
         return "https://dummyjson.com/recipes?limit=0&sortBy=id&order=desc";
+      case "/categories/cuisine":
+        return "https://dummyjson.com/recipes/tag/Italian";
       default:
     }
   };

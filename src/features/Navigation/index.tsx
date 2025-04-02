@@ -14,7 +14,7 @@ const Navigation = () => {
           <NaviLink to={"/allRecipes"}>Recipes</NaviLink>
         </ListItem>
         <ListItem>
-          <a>Categories</a>
+          <NaviLink to={"/categories/cuisine"}>Categories</NaviLink>
         </ListItem>
         <ListItem>
           <a>About</a>
