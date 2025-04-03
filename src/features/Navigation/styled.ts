@@ -23,8 +23,8 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style-type: none;
-  margin-right: 32px;
   font-size: 20px;
+  padding: 0 32px 32px;
   color: ${({ theme }) => theme.color.white};
 
   &:first-child {
@@ -39,12 +39,59 @@ export const SiteName = styled(ListItem)`
 `;
 
 export const NaviLink = styled(Link)`
+  font-size: 24px;
   text-decoration: none;
   color: ${({ theme }) => theme.color.concrete};
-
 
   &:hover {
     color: ${({ theme }) => theme.color.fruitSalad};
     transition: 0.3s;
+  }
+`;
+
+export const DropdownWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+export const CategoriesLink = styled(NaviLink)`
+  display: inline-block;
+`;
+
+export const DropdownContent = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 5px;
+  min-width: 120px;
+  opacity: 0;
+  transform: scaleY(0);
+  background-color: transparent;
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+
+  ${DropdownWrapper}:hover & {
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+  }
+`;
+
+export const DropdownItem = styled(Link)`
+  display: block;
+  padding: 10px;
+  color: ${({ theme }) => theme.color.greenHaze};
+  text-decoration: none;
+  transition: background 0.2s;
+  background-color: ${({ theme }) => theme.color.white};
+  text-align: center;
+
+  &:first-child {
+    margin-top: 16px;
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.fruitSalad};
   }
 `;
