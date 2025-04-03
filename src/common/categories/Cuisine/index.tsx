@@ -1,14 +1,14 @@
-import Navigation from "../../../../features/Navigation";
-import { useGetRecipes } from "../../../../useGetRecipes";
+import Navigation from "../../../features/Navigation";
+import { useGetRecipes } from "../../../useGetRecipes";
 import {
   RecipesImageCont,
   RecipesList,
   RecipesWrapper,
-} from "../../../AllRecipes/styled";
-import { ErrorPage } from "../../../ErrorPage";
-import Footer from "../../../Footer";
-import { LoadingPage } from "../../../LoadingPage";
-import { Image, ImageName } from "../../../Main/LatestRecipes/styled";
+} from "../../AllRecipes/styled";
+import { ErrorPage } from "../../ErrorPage";
+import Footer from "../../Footer";
+import { LoadingPage } from "../../LoadingPage";
+import { Image, ImageName } from "../../Main/LatestRecipes/styled";
 import {
   ExtraInfo,
   ListItem,
@@ -17,7 +17,7 @@ import {
   Span,
   StyledPrepTimeIcon,
   StyledStarIcon,
-} from "../../../Main/PopularPicks/styled";
+} from "../../Main/PopularPicks/styled";
 
 export const Cuisine = () => {
   const allRecipes = useGetRecipes();

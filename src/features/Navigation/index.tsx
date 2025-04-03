@@ -1,5 +1,15 @@
 import { SearchBar } from "../SearchBar";
-import { Nav, List, ListItem, SiteName, NaviLink } from "./styled";
+import {
+  Nav,
+  List,
+  ListItem,
+  SiteName,
+  NaviLink,
+  CategoriesLink,
+  DropdownWrapper,
+  DropdownContent,
+  DropdownItem,
+} from "./styled";
 
 const Navigation = () => {
   return (
@@ -14,10 +24,17 @@ const Navigation = () => {
           <NaviLink to={"/allRecipes"}>Recipes</NaviLink>
         </ListItem>
         <ListItem>
-          <NaviLink to={"/categories/cuisine"}>Categories</NaviLink>
+          <DropdownWrapper>
+            <CategoriesLink to={"/categories"}>Categories</CategoriesLink>
+            <DropdownContent>
+              <DropdownItem to={"/category/italian"}>Italian</DropdownItem>
+              <DropdownItem to={"/category/pakistani"}>Pakistani</DropdownItem>
+              <DropdownItem to="/recipes/japanese">Oriental</DropdownItem>
+            </DropdownContent>
+          </DropdownWrapper>
         </ListItem>
         <ListItem>
-          <a>About</a>
+          <NaviLink to={"/"}>About</NaviLink>
         </ListItem>
       </List>
       <SearchBar />
