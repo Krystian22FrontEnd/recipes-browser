@@ -4,7 +4,7 @@ import { ReactComponent as LoopIco } from "../../icons/loopIcon.svg";
 export const Form = styled.form`
   display: flex;
   justify-content: center;
-  margin-top: 120px;
+  margin-top: 150px;
 `;
 
 export const Input = styled.input`
