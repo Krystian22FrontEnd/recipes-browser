@@ -9,6 +9,8 @@ import {
   DropdownWrapper,
   DropdownContent,
   DropdownItem,
+  ChefHatIcon,
+  SiteNameLink,
 } from "./styled";
 
 const Navigation = () => {
@@ -16,9 +18,10 @@ const Navigation = () => {
     <Nav>
       <List>
         <SiteName>
-          <NaviLink to={"/"} title="Recipe browser's main page">
+          <SiteNameLink to={"/"} title="Recipe browser's main page">
+            <ChefHatIcon />
             Recipes browser
-          </NaviLink>
+          </SiteNameLink>
         </SiteName>
         <ListItem>
           <NaviLink to={"/allRecipes"}>Recipes</NaviLink>

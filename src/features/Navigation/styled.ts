@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import background from "../../images/background.jpg";
 import { Link } from "react-router-dom";
+import { ReactComponent as chefHatIco } from "../../icons/chefHat.svg";
 
 export const Nav = styled.nav`
   margin: 0 auto;
@@ -18,13 +19,13 @@ export const List = styled.ul`
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  padding: 32px;
+  padding-left: 0;
 `;
 
 export const ListItem = styled.li`
   list-style-type: none;
-  font-size: 20px;
-  padding: 0 32px 32px;
+  font-size: 26px;
+  padding: 16px 32px 0 32px;
   color: ${({ theme }) => theme.color.white};
 
   &:first-child {
@@ -33,13 +34,11 @@ export const ListItem = styled.li`
 `;
 
 export const SiteName = styled(ListItem)`
-  font-size: 25px;
+  font-size: 32px;
   font-weight: 700;
-  color: ${({ theme }) => theme.color.white};
 `;
 
 export const NaviLink = styled(Link)`
-  font-size: 24px;
   text-decoration: none;
   color: ${({ theme }) => theme.color.concrete};
 
@@ -48,6 +47,31 @@ export const NaviLink = styled(Link)`
     transition: 0.3s;
   }
 `;
+
+export const ChefHatIcon = styled(chefHatIco)`
+  width: 55px;
+  height: auto;
+  margin: 0 24px 10px 0;
+  transition: 0.3s;
+  color: ${({ theme }) => theme.color.fruitSalad};
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const SiteNameLink = styled(NaviLink)`
+  display: flex;
+  align-items: center;
+
+  &:hover ${ChefHatIcon} {
+    color: ${({ theme }) => theme.color.white};
+    stroke-opacity: 1;
+    transform: scale(1.1);
+  }
+`;
+
+
 
 export const DropdownWrapper = styled.div`
   position: relative;
@@ -61,8 +85,8 @@ export const CategoriesLink = styled(NaviLink)`
 export const DropdownContent = styled.div`
   position: absolute;
   top: 100%;
-  left: 3px;
-  min-width: 120px;
+  left: -6px;
+  min-width: 140px;
   opacity: 0;
   transform: scaleY(0);
   background-color: transparent;
@@ -79,7 +103,8 @@ export const DropdownContent = styled.div`
 
 export const DropdownItem = styled(Link)`
   display: block;
-  padding: 10px;
+  padding: 12px;
+  font-size: 20px;
   color: ${({ theme }) => theme.color.greenHaze};
   text-decoration: none;
   transition: background 0.2s;
@@ -87,7 +112,7 @@ export const DropdownItem = styled(Link)`
   text-align: center;
 
   &:first-child {
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   &:hover {
