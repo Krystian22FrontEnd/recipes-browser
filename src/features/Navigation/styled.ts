@@ -61,7 +61,7 @@ export const CategoriesLink = styled(NaviLink)`
 export const DropdownContent = styled.div`
   position: absolute;
   top: 100%;
-  left: 5px;
+  left: 3px;
   min-width: 120px;
   opacity: 0;
   transform: scaleY(0);
