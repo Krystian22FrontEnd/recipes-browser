@@ -11,6 +11,8 @@ import {
   DropdownItem,
   ChefHatIcon,
   SiteNameLink,
+  SubMenu,
+  DropdownItemAsDiv,
 } from "./styled";
 
 const Navigation = () => {
@@ -18,26 +20,40 @@ const Navigation = () => {
     <Nav>
       <List>
         <SiteName>
-          <SiteNameLink to={"/"} title="Recipe browser's main page">
+          <SiteNameLink to="/" title="Recipe browser's main page">
             <ChefHatIcon />
             Recipes browser
           </SiteNameLink>
         </SiteName>
         <ListItem>
-          <NaviLink to={"/allRecipes"}>Recipes</NaviLink>
+          <NaviLink to="/allRecipes">Recipes</NaviLink>
         </ListItem>
         <ListItem>
           <DropdownWrapper>
-            <CategoriesLink to={"/categories"}>Categories</CategoriesLink>
+            <CategoriesLink to="/categories">Categories</CategoriesLink>
             <DropdownContent>
-              <DropdownItem to={"/category/italian"}>Italian</DropdownItem>
-              <DropdownItem to={"/category/pakistani"}>Pakistani</DropdownItem>
-              <DropdownItem to="/recipes/japanese">Oriental</DropdownItem>
+              <DropdownItemAsDiv>
+                Cuisine
+                <SubMenu>
+                  <DropdownItem to="/category/asian">Asian</DropdownItem>
+                  <DropdownItem to="/category/italian">Italian</DropdownItem>
+                  <DropdownItem to="/category/greek">Greek</DropdownItem>
+                  <DropdownItem to="/category/brazilian">
+                    Brazilian
+                  </DropdownItem>
+                </SubMenu>
+              </DropdownItemAsDiv>
+              <DropdownItem to="/category/breakfast">Breakfast</DropdownItem>
+              <DropdownItem to="/category/lunch">Lunch</DropdownItem>
+              <DropdownItem to="/category/appetizer">Appetizer</DropdownItem>
+              <DropdownItem to="/category/dinner">Dinner</DropdownItem>
+              <DropdownItem to="/category/dessert">Dessert</DropdownItem>
+              <DropdownItem to="/category/beverage">Beverage</DropdownItem>
             </DropdownContent>
           </DropdownWrapper>
         </ListItem>
         <ListItem>
-          <NaviLink to={"/"}>About</NaviLink>
+          <NaviLink to="/">About</NaviLink>
         </ListItem>
       </List>
       <SearchBar />
