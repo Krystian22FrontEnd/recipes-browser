@@ -7,13 +7,14 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router";
 import App from "./App.tsx";
 import { AllRecipes } from "./common/AllRecipes/index.tsx";
-import { Cuisine } from "./common/categories/Cuisine/index.tsx";
+import { Cuisine } from "./common/Categories/Cuisine/index.tsx";
+import { Categories } from "./common/Categories/index.tsx";
 
 const router = createBrowserRouter(
   [
     { path: "/", element: <App /> },
     { path: "/allRecipes", element: <AllRecipes /> },
-    { path: "/categories", element: <Cuisine /> },
+    { path: "/categories", element: <Categories /> },
     { path: "/category/asian", element: <Cuisine /> },
     { path: "/category/italian", element: <Cuisine /> },
     { path: "/category/greek", element: <Cuisine /> },

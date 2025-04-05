@@ -17,7 +17,7 @@ import { RecipesImageCont, RecipesList, RecipesWrapper } from "./styled";
 
 export const AllRecipes = () => {
   const allRecipes = useGetRecipes();
-  console.log(allRecipes.data)
+  console.log(allRecipes.data);
 
   return (
     <>
