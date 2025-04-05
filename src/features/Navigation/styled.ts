@@ -71,8 +71,6 @@ export const SiteNameLink = styled(NaviLink)`
   }
 `;
 
-
-
 export const DropdownWrapper = styled.div`
   position: relative;
   display: inline-block;
@@ -93,6 +91,7 @@ export const DropdownContent = styled.div`
   transform-origin: top;
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  z-index: 1;
 
   ${DropdownWrapper}:hover & {
     opacity: 1;
@@ -111,12 +110,41 @@ export const DropdownItem = styled(Link)`
   background-color: ${({ theme }) => theme.color.white};
   text-align: center;
 
-  &:first-child {
-    margin-top: 12px;
-  }
-
   &:hover {
     color: ${({ theme }) => theme.color.white};
     background-color: ${({ theme }) => theme.color.fruitSalad};
+  }
+`;
+
+export const DropdownItemAsDiv = styled.div`
+  position: relative;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 20px;
+  color: ${({ theme }) => theme.color.greenHaze};
+  background-color: ${({ theme }) => theme.color.white};
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.fruitSalad};
+  }
+`;
+
+export const SubMenu = styled.ul`
+  position: absolute;
+  list-style-type: none;
+  top: 0;
+  left: 100%;
+  padding: 0;
+  margin: 0;
+  min-width: 140px;
+  background-color: white;
+  display: none;
+  z-index: 2;
+
+  ${DropdownItemAsDiv}:hover & {
+    display: block;
   }
 `;
