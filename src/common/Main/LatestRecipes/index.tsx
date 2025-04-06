@@ -11,6 +11,8 @@ import {
   TextWrapper,
   Wrapper,
 } from "./styled";
+import { slugify } from "../../../slugify";
+import { RecipeLink } from "../../../styledRouter";
 
 export const LatestRecipes = () => {
   const recipes = useGetLatestRecipes();
@@ -25,16 +27,16 @@ export const LatestRecipes = () => {
           </StyledParagraph>
         </TextWrapper>
         <List>
-          {recipes.data.map(
-            ({ id, name, image }) => (
-              <ListItem key={id}>
+          {recipes.data.map(({ id, name, image }) => (
+            <ListItem key={id}>
+              <RecipeLink to={`/${slugify(name)}`}>
                 <ImageCont>
                   <Image src={image} alt="food image" />
                   <ImageName>{name}</ImageName>
                 </ImageCont>
-              </ListItem>
-            )
-          )}
+              </RecipeLink>
+            </ListItem>
+          ))}
           <StyledArrow />
         </List>
       </Wrapper>
