@@ -1,4 +1,5 @@
 import Navigation from "../../../features/Navigation";
+import { RecipeLink } from "../../../styledRouter";
 import { useGetRecipes } from "../../../useGetRecipes";
 import {
   RecipesImageCont,
@@ -36,19 +37,21 @@ export const Cuisine = () => {
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
                   <ListItem key={id}>
-                    <RecipesImageCont>
-                      <Image src={image} alt="food image" />
-                      <ImageName> {name}</ImageName>
-                    </RecipesImageCont>
-                    <ExtraInfo>
-                      <ReviewCount>
-                        <StyledStarIcon />
-                        <Span>{rating}</Span> ({reviewCount}) reviews
-                      </ReviewCount>
-                      <PrepTime>
-                        <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                      </PrepTime>
-                    </ExtraInfo>
+                    <RecipeLink to={`/${id}`}>
+                      <RecipesImageCont>
+                        <Image src={image} alt="food image" />
+                        <ImageName> {name}</ImageName>
+                      </RecipesImageCont>
+                      <ExtraInfo>
+                        <ReviewCount>
+                          <StyledStarIcon />
+                          <Span>{rating}</Span> ({reviewCount}) reviews
+                        </ReviewCount>
+                        <PrepTime>
+                          <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
+                        </PrepTime>
+                      </ExtraInfo>
+                    </RecipeLink>
                   </ListItem>
                 )
               )}

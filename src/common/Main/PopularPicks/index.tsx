@@ -16,6 +16,7 @@ import {
   ButtonLink,
 } from "./styled";
 import { useGetRecipes } from "../../../useGetRecipes";
+import { RecipeLink } from "../../../styledRouter";
 
 export const PopularPicks = () => {
   const recipes = useGetRecipes();
@@ -35,19 +36,21 @@ export const PopularPicks = () => {
           {recipes.data.map(
             ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
               <ListItem key={id}>
-                <ImageContBigger>
-                  <Image src={image} alt="food image" />
-                  <ImageName> {name}</ImageName>
-                </ImageContBigger>
-                <ExtraInfo>
-                  <ReviewCount>
-                    <StyledStarIcon />
-                    <Span>{rating}</Span> ({reviewCount}) reviews
-                  </ReviewCount>
-                  <PrepTime>
-                    <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                  </PrepTime>
-                </ExtraInfo>
+                <RecipeLink to={`/${id}`}>
+                  <ImageContBigger>
+                    <Image src={image} alt="food image" />
+                    <ImageName> {name}</ImageName>
+                  </ImageContBigger>
+                  <ExtraInfo>
+                    <ReviewCount>
+                      <StyledStarIcon />
+                      <Span>{rating}</Span> ({reviewCount}) reviews
+                    </ReviewCount>
+                    <PrepTime>
+                      <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
+                    </PrepTime>
+                  </ExtraInfo>
+                </RecipeLink>
               </ListItem>
             )
           )}
