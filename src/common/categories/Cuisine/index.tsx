@@ -1,5 +1,4 @@
 import Navigation from "../../../features/Navigation";
-import { slugify } from "../../../slugify";
 import { RecipeLink } from "../../../styledRouter";
 import { useGetRecipes } from "../../../useGetRecipes";
 import {
@@ -38,7 +37,7 @@ export const Cuisine = () => {
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
                   <ListItem key={id}>
-                    <RecipeLink to={`/${slugify(name)}`}>
+                    <RecipeLink to={`/${id}`}>
                       <RecipesImageCont>
                         <Image src={image} alt="food image" />
                         <ImageName> {name}</ImageName>

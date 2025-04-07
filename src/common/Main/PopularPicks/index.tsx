@@ -16,8 +16,6 @@ import {
   ButtonLink,
 } from "./styled";
 import { useGetRecipes } from "../../../useGetRecipes";
-import { Link } from "react-router";
-import { slugify } from "../../../slugify";
 import { RecipeLink } from "../../../styledRouter";
 
 export const PopularPicks = () => {
@@ -38,7 +36,7 @@ export const PopularPicks = () => {
           {recipes.data.map(
             ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
               <ListItem key={id}>
-                <RecipeLink to={`/${slugify(name)}`}>
+                <RecipeLink to={`/${id}`}>
                   <ImageContBigger>
                     <Image src={image} alt="food image" />
                     <ImageName> {name}</ImageName>

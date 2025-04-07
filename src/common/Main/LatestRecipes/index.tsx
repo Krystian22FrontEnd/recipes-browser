@@ -11,7 +11,6 @@ import {
   TextWrapper,
   Wrapper,
 } from "./styled";
-import { slugify } from "../../../slugify";
 import { RecipeLink } from "../../../styledRouter";
 
 export const LatestRecipes = () => {
@@ -29,7 +28,7 @@ export const LatestRecipes = () => {
         <List>
           {recipes.data.map(({ id, name, image }) => (
             <ListItem key={id}>
-              <RecipeLink to={`/${slugify(name)}`}>
+              <RecipeLink to={`/${id}`}>
                 <ImageCont>
                   <Image src={image} alt="food image" />
                   <ImageName>{name}</ImageName>

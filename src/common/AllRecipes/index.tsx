@@ -14,7 +14,6 @@ import {
   StyledStarIcon,
 } from "../Main/PopularPicks/styled";
 import { RecipesImageCont, RecipesList, RecipesWrapper } from "./styled";
-import { slugify } from "../../slugify";
 import { RecipeLink } from "../../styledRouter";
 
 export const AllRecipes = () => {
@@ -35,7 +34,7 @@ export const AllRecipes = () => {
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
                   <ListItem key={id}>
-                    <RecipeLink to={`/${slugify(name)}`}>
+                    <RecipeLink to={`/${id}`}>
                       <RecipesImageCont>
                         <Image src={image} alt="food image" />
                         <ImageName> {name}</ImageName>

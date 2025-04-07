@@ -9,7 +9,7 @@ import App from "./App.tsx";
 import { AllRecipes } from "./common/AllRecipes/index.tsx";
 import { Cuisine } from "./common/Categories/Cuisine/index.tsx";
 import { Categories } from "./common/Categories/index.tsx";
-import { HowToMake } from "./common/HowToMake/index.tsx";
+import { RecipeDetails } from "./common/RecipeDetails/index.js";
 
 const router = createBrowserRouter(
   [
@@ -17,7 +17,7 @@ const router = createBrowserRouter(
     { path: "/allRecipes", element: <AllRecipes /> },
     { path: "/categories", element: <Categories /> },
     { path: "/category/:typeName", element: <Cuisine /> },
-    { path: "/:slug", element: <HowToMake /> },
+    { path: "/:id", element: <RecipeDetails /> },
   ],
   { basename: "/search-recipe/" }
 );

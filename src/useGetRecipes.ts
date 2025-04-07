@@ -9,8 +9,8 @@ interface Meal {
   rating: number;
   reviewCount: number;
   prepTimeMinutes: number;
-  instructions: [""],
-  ingredients: [""],
+  instructions: string[];
+  ingredients: string[];
 }
 
 type Status =
@@ -25,7 +25,7 @@ export const useGetRecipes = () => {
   });
 
   const location = useLocation();
-  const { typeName, name } = useParams();
+  const { typeName, id } = useParams();
 
   const allowedTags = ["Asian", "Italian", "Greek", "Brazilian"];
   const allowedMealType = [
@@ -38,13 +38,13 @@ export const useGetRecipes = () => {
   ];
 
   const changeApiURL = () => {
-    if (location.pathname === `/${name}`) {
-      return `https://dummyjson.com/recipes/${name}`;
+    if (id) {
+      return `https://dummyjson.com/recipes/${id}`;
     }
 
     if (location.pathname === "/") {
       return "https://dummyjson.com/recipes?sortBy=reviewCount&order=desc&limit=12";
-    } 
+    }
 
     if (!typeName) {
       return "https://dummyjson.com/recipes?limit=0";
@@ -64,24 +64,32 @@ export const useGetRecipes = () => {
   };
 
   useEffect(() => {
-    const axiosData = async () => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get<{ recipes: Meal[] }>(
-          `${changeApiURL()}`
-        );
+        const response = await axios.get(changeApiURL());
 
-        setRecipes({
-          status: "success",
-          data: response.data.recipes,
-        });
+        if (id) {
+          setRecipes({
+            status: "success",
+            data: [response.data],
+          });
+        } else {
+          setRecipes({
+            status: "success",
+            data: response.data.recipes || response.data,
+          });
+        }
       } catch (error) {
+        console.error("Error fetching data:", error);
         setRecipes({
           status: "error",
           data: [],
         });
       }
     };
-    setTimeout(axiosData, 1000);
+
+    setTimeout(fetchData, 1000);
   }, [location.pathname]);
+
   return recipes;
 };
