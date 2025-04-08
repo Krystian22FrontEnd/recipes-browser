@@ -1,3 +1,4 @@
+import { useLocation } from "react-router";
 import Navigation from "../../../features/Navigation";
 import { RecipeLink } from "../../../styledRouter";
 import { useGetRecipes } from "../../../useGetRecipes";
@@ -12,9 +13,9 @@ import { LoadingPage } from "../../LoadingPage";
 import { Image, ImageName } from "../../Main/LatestRecipes/styled";
 import {
   ExtraInfo,
+  ExtraInfoItem,
+  Header2,
   ListItem,
-  PrepTime,
-  ReviewCount,
   Span,
   StyledPrepTimeIcon,
   StyledStarIcon,
@@ -22,6 +23,24 @@ import {
 
 export const Cuisine = () => {
   const allRecipes = useGetRecipes();
+  const location = useLocation()
+
+  const findCuisine = () => {
+    switch (location.pathname) {
+      case "/category/asian":
+        return "Cuisine: Asian"
+    
+    case "/category/italian":
+        return "Cuisine: Italian"
+    
+    case "/category/greek":
+        return "Cuisine: Greek"
+    
+        case "/category/brazilian":
+        return "Cuisine: Brazilian"
+      }
+  }
+
 
   return (
     <>
@@ -33,6 +52,7 @@ export const Cuisine = () => {
         <>
           <Navigation />
           <RecipesWrapper>
+            <Header2>{findCuisine()}</Header2>
             <RecipesList>
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
@@ -40,16 +60,16 @@ export const Cuisine = () => {
                     <RecipeLink to={`/${id}`}>
                       <RecipesImageCont>
                         <Image src={image} alt="food image" />
-                        <ImageName> {name}</ImageName>
+                        <ImageName>{name}</ImageName>
                       </RecipesImageCont>
                       <ExtraInfo>
-                        <ReviewCount>
+                        <ExtraInfoItem>
                           <StyledStarIcon />
                           <Span>{rating}</Span> ({reviewCount}) reviews
-                        </ReviewCount>
-                        <PrepTime>
+                        </ExtraInfoItem>
+                        <ExtraInfoItem>
                           <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                        </PrepTime>
+                        </ExtraInfoItem>
                       </ExtraInfo>
                     </RecipeLink>
                   </ListItem>

@@ -6,7 +6,7 @@ export const ChefIcon = styled(ChefIco)`
   animation-duration: 1.8s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  height: 150px;
+  height: 10rem;
 
   @keyframes loader {
     0% {
