@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Image } from "../Main/LatestRecipes/styled";
 
-export const BackgroundImage = styled.div<{ imageurl?: string }>`
+export const BackgroundImage = styled.div<{ $imageurl?: string }>`
   position: relative;
   min-height: 100vh;
 
@@ -12,7 +12,8 @@ export const BackgroundImage = styled.div<{ imageurl?: string }>`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${({ imageurl }) => (imageurl ? `url(${imageurl})` : "none")};
+    background: ${({ $imageurl }) =>
+      $imageurl ? `url(${$imageurl})` : "none"};
     background-size: cover;
     background-position: center;
     opacity: 0.5;

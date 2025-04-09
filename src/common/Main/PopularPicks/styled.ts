@@ -47,7 +47,7 @@ export const ListItem = styled.li`
 
 export const ImageContBigger = styled(ImageCont)`
   width: clamp(12rem, 23vw, 28rem);
-  height: auto
+  height: auto;
 `;
 
 export const ExtraInfo = styled.div`

@@ -1,4 +1,3 @@
-import { useLocation } from "react-router";
 import Navigation from "../../../features/Navigation";
 import { RecipeLink } from "../../../styledRouter";
 import { useGetRecipes } from "../../../useGetRecipes";
@@ -23,24 +22,6 @@ import {
 
 export const Cuisine = () => {
   const allRecipes = useGetRecipes();
-  const location = useLocation()
-
-  const findCuisine = () => {
-    switch (location.pathname) {
-      case "/category/asian":
-        return "Cuisine: Asian"
-    
-    case "/category/italian":
-        return "Cuisine: Italian"
-    
-    case "/category/greek":
-        return "Cuisine: Greek"
-    
-        case "/category/brazilian":
-        return "Cuisine: Brazilian"
-      }
-  }
-
 
   return (
     <>
@@ -52,7 +33,7 @@ export const Cuisine = () => {
         <>
           <Navigation />
           <RecipesWrapper>
-            <Header2>{findCuisine()}</Header2>
+            <Header2></Header2>
             <RecipesList>
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (

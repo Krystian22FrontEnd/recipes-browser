@@ -40,7 +40,7 @@ export const RecipeDetails = () => {
       ) : (
         <>
           <Navigation />
-          <BackgroundImage imageurl={recipe?.image}>
+          <BackgroundImage $imageurl={recipe?.image}>
             <RecipeWrapper>
               <Wrapper key={recipe?.id}>
                 <ImageCont  id="recipe">

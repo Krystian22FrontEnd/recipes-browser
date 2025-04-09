@@ -14,7 +14,7 @@ export const SocialsLinks = styled.a`
 `;
 
 export const styleIcon = (Icon: FC<SVGProps<SVGSVGElement>>) => styled(Icon)`
-  width: clamp(2rem, 4vw, 3rem);
+  width: 3rem;
   height: auto;
   color: ${({theme}) => theme.color.black};
 
