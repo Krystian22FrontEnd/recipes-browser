@@ -24,8 +24,7 @@ export const RecipeDetails = () => {
   const allRecipes = useGetRecipes();
   const { id } = useParams<{ id: string }>();
 
-  const recipe = allRecipes.data.find(
-    ({ id: recipeId }) => String(recipeId) === id
+  const recipe = allRecipes.data.find(({ id: recipeId }) => String(recipeId) === id
   );
   useEffect(() => {
     return document
@@ -41,18 +40,16 @@ export const RecipeDetails = () => {
       ) : (
         <>
           <Navigation />
-          <BackgroundImage imageurl={recipe?.image}>
-            <Background>
-              <RecipeName id="recipe"> {recipe?.name}</RecipeName>
-            </Background>
+          <BackgroundImage $imageurl={recipe?.image}>
             <RecipeWrapper>
               <Wrapper key={recipe?.id}>
-                <ImageCont>
+                <ImageCont  id="recipe">
                   <RecipeImage src={recipe?.image} alt="food image" />
                 </ImageCont>
               </Wrapper>
             </RecipeWrapper>
             <Background>
+              <RecipeName>{recipe?.name}</RecipeName>
               <Header3>Instructions:</Header3>
               <List>
                 {recipe?.instructions.map((instruction, index) => (

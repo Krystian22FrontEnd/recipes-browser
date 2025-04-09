@@ -11,25 +11,28 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   align-items: center;
   border-bottom: 3px solid ${({ theme }) => theme.color.greenHaze};
-  max-width: 1360px;
-  padding-bottom: 20px;
+  max-width: 71vw;
+  padding-bottom: 1.25rem;
 `;
 
 export const Header2 = styled.h2`
-  font-size: 35px;
-  padding-bottom: 24px;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  padding-bottom: 1.5rem;
   margin: 0;
   text-align: center;
+  color: ${({ theme }) => theme.color.greenHaze};
 `;
 
 export const StyledParagraph = styled.p`
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
+  font-size: clamp(0.75rem, 2vw, 1.4rem);
+  color: ${({ theme }) => theme.color.greenHaze};
 `;
 
 export const List = styled.ul`
   display: grid;
-  gap: 20px;
+  gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
   padding-left: 0;
 `;
@@ -43,7 +46,7 @@ export const ListItem = styled.li`
 `;
 
 export const ImageContBigger = styled(ImageCont)`
-  width: 438px;
+  width: clamp(12rem, 23vw, 28rem);
   height: auto;
 `;
 
@@ -51,48 +54,41 @@ export const ExtraInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  margin-top: 5px;
+  padding: 1.25rem;
+  margin-top: 0.25rem;
 `;
 
 export const Span = styled.span`
   font-weight: 700;
-  padding-right: 15px;
-  color: black;
+  padding-right: 1rem;
+  color: ${({ theme }) => theme.color.black};
 `;
 
-export const ReviewCount = styled.span`
+export const ExtraInfoItem = styled.span`
   display: flex;
   align-items: flex-end;
-  color: gray;
-  font-size: 18px;
-`;
-
-export const PrepTime = styled.span`
-  display: flex;
-  align-items: flex-end;
-  color: gray;
-  font-size: 18px;
+  color: ${({ theme }) => theme.color.gray};
+  font-size: 1.125rem;
 `;
 
 export const StyledStarIcon = styled(StarIcon)`
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-right: 0.625rem;
 `;
 
 export const StyledPrepTimeIcon = styled(PrepTimeIcon)`
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-right: 0.625rem;
 `;
 
 export const StyledButtonArrow = styled(ButtonArrow)`
-  height: 22px;
-  padding-left: 10px;
+  height: 1.4rem;
+  padding-left: 0.625rem;
   @keyframes arrowSlide {
     100% {
-      transform: translateX(8px) scale(1.1);
+      transform: translateX(0.5rem) scale(1.1);
     }
   }
 `;
@@ -100,8 +96,8 @@ export const StyledButtonArrow = styled(ButtonArrow)`
 export const ButtonLink = styled(Link)`
   display: flex;
   align-items: end;
-  padding: 16px 24px;
-  margin-top: 30px;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
   border: none;
   font-weight: 600;
   background-color: ${({ theme }) => theme.color.greenHaze};

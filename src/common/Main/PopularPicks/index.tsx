@@ -8,10 +8,9 @@ import {
   ImageContBigger,
   Header2,
   ExtraInfo,
+  ExtraInfoItem,
   StyledStarIcon,
   StyledPrepTimeIcon,
-  PrepTime,
-  ReviewCount,
   Span,
   ButtonLink,
 } from "./styled";
@@ -27,10 +26,7 @@ export const PopularPicks = () => {
       <Wrapper>
         <Header2>Popular Choices</Header2>
         <StyledParagraph>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
-          repellendus culpa excepturi minus dicta. Quaerat inventore architecto
-          sunt maxime commodi libero? Expedita, inventore obcaecati repellendus
-          sequi non temporibus et. Consequuntur!
+        Not sure where to start? These recipes are fan favorites — maybe you'll find your new go-to dish!
         </StyledParagraph>
         <List>
           {recipes.data.map(
@@ -42,13 +38,13 @@ export const PopularPicks = () => {
                     <ImageName> {name}</ImageName>
                   </ImageContBigger>
                   <ExtraInfo>
-                    <ReviewCount>
+                    <ExtraInfoItem>
                       <StyledStarIcon />
                       <Span>{rating}</Span> ({reviewCount}) reviews
-                    </ReviewCount>
-                    <PrepTime>
+                    </ExtraInfoItem>
+                    <ExtraInfoItem>
                       <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                    </PrepTime>
+                    </ExtraInfoItem>
                   </ExtraInfo>
                 </RecipeLink>
               </ListItem>

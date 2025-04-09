@@ -12,9 +12,9 @@ import { LoadingPage } from "../../LoadingPage";
 import { Image, ImageName } from "../../Main/LatestRecipes/styled";
 import {
   ExtraInfo,
+  ExtraInfoItem,
+  Header2,
   ListItem,
-  PrepTime,
-  ReviewCount,
   Span,
   StyledPrepTimeIcon,
   StyledStarIcon,
@@ -33,6 +33,7 @@ export const Cuisine = () => {
         <>
           <Navigation />
           <RecipesWrapper>
+            <Header2></Header2>
             <RecipesList>
               {allRecipes.data.map(
                 ({ id, name, image, rating, reviewCount, prepTimeMinutes }) => (
@@ -40,16 +41,16 @@ export const Cuisine = () => {
                     <RecipeLink to={`/${id}`}>
                       <RecipesImageCont>
                         <Image src={image} alt="food image" />
-                        <ImageName> {name}</ImageName>
+                        <ImageName>{name}</ImageName>
                       </RecipesImageCont>
                       <ExtraInfo>
-                        <ReviewCount>
+                        <ExtraInfoItem>
                           <StyledStarIcon />
                           <Span>{rating}</Span> ({reviewCount}) reviews
-                        </ReviewCount>
-                        <PrepTime>
+                        </ExtraInfoItem>
+                        <ExtraInfoItem>
                           <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                        </PrepTime>
+                        </ExtraInfoItem>
                       </ExtraInfo>
                     </RecipeLink>
                   </ListItem>

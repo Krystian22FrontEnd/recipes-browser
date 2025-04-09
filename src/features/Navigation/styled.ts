@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   background-position: center;
   background-attachment: fixed;
   box-shadow: inset 0px 50px 80px 0px ${({ theme }) => theme.color.woodSmoke};
-  margin-bottom: 75px;
+  margin-bottom: 30px;
 `;
 
 export const List = styled.ul`

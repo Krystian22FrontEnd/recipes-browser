@@ -6,9 +6,8 @@ import { LoadingPage } from "../LoadingPage";
 import { Image, ImageName } from "../Main/LatestRecipes/styled";
 import {
   ExtraInfo,
+  ExtraInfoItem,
   ListItem,
-  PrepTime,
-  ReviewCount,
   Span,
   StyledPrepTimeIcon,
   StyledStarIcon,
@@ -40,13 +39,13 @@ export const AllRecipes = () => {
                         <ImageName> {name}</ImageName>
                       </RecipesImageCont>
                       <ExtraInfo>
-                        <ReviewCount>
+                        <ExtraInfoItem>
                           <StyledStarIcon />
                           <Span>{rating}</Span> ({reviewCount}) reviews
-                        </ReviewCount>
-                        <PrepTime>
+                        </ExtraInfoItem>
+                        <ExtraInfoItem>
                           <StyledPrepTimeIcon /> 00:{prepTimeMinutes}
-                        </PrepTime>
+                        </ExtraInfoItem>
                       </ExtraInfo>
                     </RecipeLink>
                   </ListItem>

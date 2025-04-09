@@ -10,7 +10,7 @@ export const List = styled.ul`
 
 export const styleIcon = (Icon: FC<SVGProps<SVGSVGElement>>) => styled(Icon)`
   height: auto;
-  width: 48px;
+  width: clamp(2rem, 4vw, 3rem);
 
   &:hover {
     animation-name: rotate;
