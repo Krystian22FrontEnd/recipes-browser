@@ -72,15 +72,16 @@ export const ExtraInfoItem = styled.span`
 `;
 
 export const StyledStarIcon = styled(StarIcon)`
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.56rem;
+  height: 1.56rem;
   margin-right: 0.625rem;
 `;
 
 export const StyledPrepTimeIcon = styled(PrepTimeIcon)`
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.56rem;
+  height: 1.56rem;
   margin-right: 0.625rem;
+  color: ${({ theme }) => theme.color.greenHaze};
 `;
 
 export const StyledButtonArrow = styled(ButtonArrow)`
