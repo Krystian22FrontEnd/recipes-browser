@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { Image } from "../Main/LatestRecipes/styled";
+import { ExtraInfo, StyledPrepTimeIcon } from "../Main/PopularPicks/styled";
+import { ReactComponent as CutleryIco } from "../../icons/cutlery.svg";
+import { ReactComponent as ChefHatIco } from "../../icons/chefHat2.svg";
+import { ReactComponent as FlagIco } from "../../icons/flag.svg";
 
 export const BackgroundImage = styled.div<{ $imageurl?: string }>`
   position: relative;
@@ -53,13 +57,67 @@ export const RecipeImage = styled(Image)`
   border-radius: 50%;
 `;
 
+export const Span = styled.span`
+  padding: 0.75rem 0;
+  font-size: clamp(0.75rem, 2vw, 1.5rem);
+  text-align: center;
+  color: ${({ theme }) => theme.color.white};
+  font-weight: 700;
+`;
+
+export const DataSpan = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.color.white};
+  font-size: clamp(0.5rem, 2vw, 1.25rem);
+`;
+
+export const PrepTimeSpan = styled(DataSpan)`
+  align-items: flex-end;
+`;
+
+export const FlagIcon = styled(FlagIco)`
+  width: 2rem;
+  height: auto;
+`;
+
+export const ChefHatIcon2 = styled(ChefHatIco)`
+  width: 2rem;
+  height: auto;
+`;
+
+export const StyledPrepTimeIconWhite = styled(StyledPrepTimeIcon)`
+  width: 2rem;
+  height: auto;
+  color: ${({ theme }) => theme.color.white};
+  margin: 0;
+`;
+
+export const CutleryIcon = styled(CutleryIco)`
+  width: 2rem;
+  height: auto;
+`;
+
+export const RecipeExtraInfo = styled(ExtraInfo)`
+  justify-content: space-around;
+  background-color: ${({ theme }) => theme.color.fruitSalad};
+  margin: 0;
+`;
+
+export const RecipeExtraInfoItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const RecipeName = styled.h2`
   margin: 0;
   color: ${({ theme }) => theme.color.greenHaze};
-  margin-bottom: 20px;
-  font-size: clamp(28px, 6vw, 48px);
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.75rem, 6vw, 3rem);
   text-align: center;
-  margin-top: 20px;
+  margin-top: 3rem;
 `;
 
 export const Header3 = styled.h3`
@@ -115,6 +173,6 @@ export const Background = styled.div`
     bottom: 0;
     background-color: white;
     opacity: 0.7;
-    z-index: -1; /* Umieszczamy warstwę pod elementami */
+    z-index: -1;
   }
 `;

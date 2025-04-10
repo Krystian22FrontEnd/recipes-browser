@@ -11,6 +11,11 @@ interface Meal {
   prepTimeMinutes: number;
   instructions: string[];
   ingredients: string[];
+  cuisine: string;
+  servings: number;
+  difficulty: string;
+  caloriesPerServing: number;
+  mealType: string[];
 }
 
 type Status =

@@ -1,4 +1,4 @@
-export const mealType = [
+export const mealTypeData = [
   {
     name: "Appetizer",
     image: "https://cdn.dummyjson.com/recipe-images/38.webp",
