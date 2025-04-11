@@ -20,7 +20,7 @@ export const BackgroundImage = styled.div<{ $imageurl?: string }>`
       $imageurl ? `url(${$imageurl})` : "none"};
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.3;
     filter: blur(5px);
     z-index: -1;
   }

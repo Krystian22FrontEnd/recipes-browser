@@ -10,8 +10,8 @@ export const Nav = styled.nav`
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  box-shadow: inset 0px 50px 80px 0px ${({ theme }) => theme.color.woodSmoke};
-  margin-bottom: 30px;
+  box-shadow: inset 0px 3.5rem 5rem 0 ${({ theme }) => theme.color.woodSmoke};
+  margin-bottom: 2rem;
 `;
 
 export const List = styled.ul`
@@ -24,8 +24,8 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   list-style-type: none;
-  font-size: 26px;
-  padding: 16px 32px 0 32px;
+  font-size: 1.75rem;
+  padding: 1rem 2rem 0 2rem;
   color: ${({ theme }) => theme.color.white};
 
   &:first-child {
@@ -34,7 +34,7 @@ export const ListItem = styled.li`
 `;
 
 export const SiteName = styled(ListItem)`
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 `;
 
@@ -49,9 +49,9 @@ export const NaviLink = styled(Link)`
 `;
 
 export const ChefHatIcon = styled(chefHatIco)`
-  width: 55px;
+  width: 3.5rem;
   height: auto;
-  margin: 0 24px 10px 0;
+  margin: 0 1.5rem 0.625rem 0;
   transition: 0.3s;
   color: ${({ theme }) => theme.color.fruitSalad};
 
@@ -83,8 +83,8 @@ export const CategoriesLink = styled(NaviLink)`
 export const DropdownContent = styled.div`
   position: absolute;
   top: 100%;
-  left: -6px;
-  min-width: 140px;
+  left: -0.375rem;
+  min-width: 8.75rem;
   opacity: 0;
   transform: scaleY(0);
   background-color: transparent;
@@ -102,8 +102,8 @@ export const DropdownContent = styled.div`
 
 export const DropdownItem = styled(Link)`
   display: block;
-  padding: 12px;
-  font-size: 20px;
+  padding: 0.75rem;
+  font-size: 1.25rem;
   color: ${({ theme }) => theme.color.greenHaze};
   text-decoration: none;
   transition: background 0.2s;
@@ -118,9 +118,9 @@ export const DropdownItem = styled(Link)`
 
 export const DropdownItemAsDiv = styled.div`
   position: relative;
-  margin-top: 10px;
-  padding: 12px;
-  font-size: 20px;
+  margin-top: 0.625rem;
+  padding: 0.75rem;
+  font-size: 1.25rem;
   color: ${({ theme }) => theme.color.greenHaze};
   background-color: ${({ theme }) => theme.color.white};
   text-align: center;
@@ -139,7 +139,7 @@ export const SubMenu = styled.ul`
   left: 100%;
   padding: 0;
   margin: 0;
-  min-width: 140px;
+  min-width: 8.75rem;
   background-color: white;
   display: none;
   z-index: 2;

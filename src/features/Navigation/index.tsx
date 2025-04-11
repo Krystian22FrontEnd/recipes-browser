@@ -53,7 +53,7 @@ const Navigation = () => {
           </DropdownWrapper>
         </ListItem>
         <ListItem>
-          <NaviLink to="/">About</NaviLink>
+  <NaviLink to={"/author"}>About(me)</NaviLink>
         </ListItem>
       </List>
       <SearchBar />
