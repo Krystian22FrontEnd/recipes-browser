@@ -19,7 +19,7 @@ const router = createBrowserRouter(
     { path: "/category/:typeName", element: <Cuisine /> },
     { path: "/:id", element: <RecipeDetails /> },
   ],
-  { basename: "/search-recipe/" }
+  { basename: "/recipes-browser/" }
 );
 
 createRoot(document.getElementById("root")!).render(

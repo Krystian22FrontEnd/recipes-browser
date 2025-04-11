@@ -1,9 +1,9 @@
 {
-  "name": "search-recipe",
+  "name": "recipes-browser",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://krystian22frontend.github.io/search-recipe/",
+  "homepage": "https://krystian22frontend.github.io/recipes-browser/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
