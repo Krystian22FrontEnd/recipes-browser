@@ -10,12 +10,14 @@ import { AllRecipes } from "./common/AllRecipes/index.tsx";
 import { Cuisine } from "./common/Categories/Cuisine/index.tsx";
 import { Categories } from "./common/Categories/index.tsx";
 import { RecipeDetails } from "./common/RecipeDetails/index.js";
+import { About } from "./common/About/index.tsx";
 
 const router = createBrowserRouter(
   [
     { path: "/", element: <App /> },
     { path: "/allRecipes", element: <AllRecipes /> },
     { path: "/categories", element: <Categories /> },
+    { path: "/author", element: <About /> },
     { path: "/category/:typeName", element: <Cuisine /> },
     { path: "/:id", element: <RecipeDetails /> },
   ],
